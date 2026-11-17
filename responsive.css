@@ -1,0 +1,121 @@
+/* Shared layout safeguards, loaded after each page's component styles. */
+.wrap { width: min(1180px, calc(100% - 40px)); }
+main, section, article, .hero-copy, .entry-content, .project-copy,
+.resource-list, .collab-copy, .about-hero > div { min-width: 0; }
+img, svg { max-width: 100%; }
+h1, h2, h3, p, a { overflow-wrap: break-word; }
+.hero, .about-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.hero-actions, .mini-tags { flex-wrap: wrap; }
+.button, .project-cta { max-width: 100%; min-height: 44px; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.resources { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
+.timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline-start: 14px; }
+.interest-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.interest { min-width: 0; padding: 24px; }
+.interest h3 { font-size: clamp(23px, 2.3vw, 32px); overflow-wrap: anywhere; }
+.interest p { font-size: 13px; line-height: 1.9; }
+.current-project {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center; height: auto; min-height: 0;
+}
+.project-art { height: auto; aspect-ratio: 16 / 9; min-width: 0; }
+.project-image { width: 100%; height: 100%; object-fit: contain; }
+.project-dot { flex: 0 0 8px; }
+.current-project h2 { font-size: clamp(26px, 3vw, 38px); overflow-wrap: anywhere; }
+.project-copy p { max-width: none; }
+.current-marker { flex-wrap: wrap; }
+.workshop, .collab { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.publishing > div { min-width: 0; }
+
+@media (max-width: 1000px) {
+  .hero, .about-hero { gap: 28px; }
+  .header { gap: 15px; }
+  .hero h1, .about-hero h1 { font-size: clamp(34px, 4.6vw, 48px); }
+  .interest { padding: 20px; }
+  .current-project { padding: 30px; gap: 26px; }
+  .workshop, .collab { padding: 32px; gap: 30px; }
+}
+
+/* Stack before the fixed-size illustrations squeeze the reading column. */
+@media (max-width: 900px) {
+  .hero, .about-hero { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy, .about-hero > div:first-child { max-width: 650px; }
+  .board-art { width: 360px; max-width: 100%; margin: 10px auto 20px; }
+  .identity-art { width: 400px; max-width: 100%; margin: 10px auto; }
+  .current-project { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .project-art { width: 100%; max-width: 600px; justify-self: center; order: 0; }
+  .project-copy { order: 1; }
+  .current-project h2 { font-size: clamp(28px, 5vw, 38px); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .interest-grid { grid-template-columns: minmax(0, 1fr); }
+  .interest {
+    display: grid; grid-template-columns: minmax(0, 1fr) 150px;
+    column-gap: 20px; align-items: center; min-height: 210px; padding: 24px;
+  }
+  .interest-visual {
+    position: static; grid-column: 2; grid-row: 1 / 4;
+    width: 150px; height: 150px; opacity: 1;
+  }
+  .interest-number, .interest h3, .interest p { grid-column: 1; }
+  .interest h3 { font-size: clamp(24px, 4vw, 32px); min-height: 0; max-width: none; margin: 12px 0; }
+  .interest p { margin: 0; text-align: right; }
+  .workshop, .collab { grid-template-columns: minmax(0, 1fr); }
+  .workshop-sheet { width: min(100%, 480px); justify-self: center; }
+  .collab-art { width: 280px; max-width: 100%; margin: auto; }
+  .collab-copy { max-width: 620px; }
+  .publishing { flex-wrap: wrap; }
+  .publishing .text-link { margin-inline-start: 0; }
+}
+
+@media (max-width: 760px) {
+  .wrap { width: calc(100% - 36px); }
+  .header { padding-block: 16px 8px; gap: 8px; }
+  nav { gap: 8px; flex-wrap: wrap; }
+  .hero, .about-hero { padding-block: 32px 40px; }
+  .hero h1, .about-hero h1 { font-size: clamp(30px, 7vw, 43px); letter-spacing: -1px; }
+  .section { padding-block: 44px; }
+  .section-heading { display: block; }
+  .section-heading > p { margin-top: 12px; }
+  .timeline, .resources { grid-template-columns: minmax(0, 1fr); }
+  .journal-entry { grid-template-columns: minmax(0, 1fr); }
+  .entry-side { flex-wrap: wrap; }
+  .current-project { padding: 22px; }
+  .project-art { height: auto; }
+  .identity-art { width: 340px; height: 410px; }
+  .project-copy .eyebrow { font-size: 11px; }
+  .current-project h2 { font-size: clamp(25px, 6vw, 34px); }
+  .workshop, .collab { padding: 28px 24px; }
+  .workshop-sheet { transform: none; margin: 0; }
+  .collab-copy h2 { font-size: clamp(25px, 6vw, 32px); }
+  .publishing { align-items: flex-start; }
+  footer { flex-wrap: wrap; }
+}
+
+@media (max-width: 420px) {
+  .wrap { width: calc(100% - 32px); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .interest { grid-template-columns: minmax(0, 1fr); padding: 24px; gap: 0; }
+  .interest-visual { grid-column: 1; grid-row: 1; justify-self: center; width: 140px; height: 140px; }
+  .interest-number { margin-top: 14px; }
+  .interest h3 { font-size: 28px; }
+  .interest p { margin-top: 6px; }
+  .current-project { padding: 18px; }
+  .project-cta { gap: 10px; padding-inline: 12px; }
+  .identity-art { transform: none; height: 400px; }
+  .art-orbit { width: 85%; height: auto; aspect-ratio: 1; left: 7%; }
+  .orbit-two { width: 65%; left: 17%; }
+  .id-label { font-size: 8px; letter-spacing: 1px; }
+  .identity-card { padding: 18px; }
+  .identity-card > div { gap: 10px; font-size: 10px; }
+  .art-coordinate { left: 20%; }
+  .board-art { height: 405px; }
+  .game-board { width: 80%; height: auto; aspect-ratio: 1; left: 12%; }
+  .design-card { width: 185px; left: 8px; }
+  .dice { width: 56px; height: 56px; right: 8px; bottom: 25px; padding: 10px; }
+  .collab-art { width: 240px; }
+  .swatch { width: 95px; height: 140px; }
+  .swatch-one { left: 5px; }.swatch-two { left: 65px; }.swatch-three { left: 125px; }
+  .workshop, .collab { padding: 24px 18px; }
+  .hero-actions { gap: 18px; }
+}
