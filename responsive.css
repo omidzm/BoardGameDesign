@@ -119,3 +119,6 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .workshop, .collab { padding: 24px 18px; }
   .hero-actions { gap: 18px; }
 }
+
+/* Container-based sizing also covers narrow cards at desktop breakpoints. */
+.interest h3{font-size:clamp(18px,10cqi,32px);max-width:100%;overflow-wrap:normal;word-break:normal}
