@@ -18,11 +18,8 @@ python -m http.server 8000
 
 سپس http://localhost:8000 را باز کنید.
 
-## منابع مسیر
+## منبع اصلی
 
 - [Board Game Design Lab](https://boardgamedesignlab.com/game-design/)
-- [Games Precipice](https://www.gamesprecipice.com/table-of-contents/)
-- [Decision Space](https://www.decisionspacepodcast.com/)
-- [Adam in Wales](https://www.youtube.com/@AdaminWales)
 
 برای هر بازی، تجربه‌ی واقعی، تعداد دفعات و بازیکنان، یک تصمیم مهم، تحلیل مکانیزم و منابع ثبت می‌شوند. منابع و تحلیل نهایی می‌توانند ورودی ویدئوهای NotebookLM باشند.
