@@ -12,29 +12,17 @@
 .project-copy{position:relative;z-index:1}
 .project-copy .eyebrow{display:flex;align-items:center;gap:9px;color:#786644;margin-bottom:12px}
 .project-dot{width:8px;height:8px;border-radius:50%;background:#087f5b;box-shadow:0 0 0 4px #087f5b1c}
-.current-project h2{color:#18233a;text-align:right;font-size:clamp(28px,3vw,38px);line-height:1.28}
+.current-project h2{color:#18233a;text-align:left;font-size:clamp(28px,3vw,38px);line-height:1.28}
+.current-project h2[lang="en"]{direction:ltr;text-align:left}
 .current-project h2 span{color:#916c32}
-.project-description{font-size:14px!important;line-height:2;color:#596171!important;max-width:440px;margin:17px 0!important}
-.project-tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.project-description{direction:rtl;text-align:right;font-size:14px!important;line-height:2;color:#596171!important;max-width:440px;margin:17px 0!important}
+.project-tags{direction:rtl;display:flex;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin:0 0 22px}
 .project-tags span{padding:3px 11px;border:1px solid #dfd4ba;border-radius:99px;color:#6b5b3e;font-size:10px}
-.project-cta{display:inline-flex;align-items:center;gap:18px;padding:11px 17px;border-radius:5px;background:#087f5b;color:#fff;font-size:12px;font-weight:700;box-shadow:0 4px 0 #075c43}
+.project-cta{direction:rtl;text-align:right;display:inline-flex;align-items:center;gap:18px;padding:11px 17px;border-radius:5px;background:#087f5b;color:#fff;font-size:12px;font-weight:700;box-shadow:0 4px 0 #075c43}
 .project-cta:hover{background:#066b4d;color:#fff;transform:translateY(-1px)}
 .project-cta span{font-size:18px;line-height:1}
-.project-footnote{font-size:10px!important;color:#827b6e!important;margin:15px 0 0!important}
-.project-art{height:255px;position:relative;direction:ltr;overflow:hidden;border:1px solid #eadfca;border-radius:5px;background:radial-gradient(circle at 50% 45%,#fff 0,#f6eedc 64%,#f0e5cc 100%)}
-.project-art:before,.project-art:after{content:"";position:absolute;left:50%;top:50%;width:205px;height:205px;border:1px solid #b8944d35;border-radius:50%;transform:translate(-50%,-50%)}
-.project-art:after{width:164px;height:164px;border-style:dashed}
-.project-art-label{position:absolute;z-index:2;left:18px;top:15px;font:700 8px Arial,sans-serif;letter-spacing:1.6px;color:#8f7444}
-.project-card{position:absolute;z-index:1;top:34px;width:140px;height:188px;padding:13px;border:1px solid #d3b56c;border-radius:9px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 13px 22px #30240f2b}
-.project-card:after{content:"";position:absolute;inset:7px;border:1px solid #d2b36870;border-radius:5px;pointer-events:none}
-.card-back{left:31%;transform:rotate(-13deg);background:linear-gradient(145deg,#17233c,#263855);color:#e6c77e;text-align:center;align-items:center}
-.card-front{left:47%;transform:rotate(9deg);background:linear-gradient(145deg,#fffefa,#f2ead8);color:#1d2940}
-.card-corner{font:700 13px Georgia,serif;line-height:1.1}
-.card-ornament{position:absolute;left:50%;top:50%;transform:translate(-50%,-58%);font-size:62px;color:#d8b769;text-shadow:0 2px 0 #846b37}
-.project-card small{position:relative;z-index:1;font:700 8px Arial,sans-serif;letter-spacing:1.5px;text-align:center;line-height:1.5}
-.card-front strong{position:absolute;left:50%;top:50%;transform:translate(-50%,-53%);font:64px Georgia,serif;color:#b38b40}
-.card-front small{margin-bottom:3px;color:#74603d}
-.corner-bottom{align-self:flex-end;transform:rotate(180deg)}
-.project-coin{position:absolute;z-index:2;right:calc(50% - 112px);bottom:26px;width:41px;height:41px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f5d98c,#bb8e3d);border:3px double #8e6829;color:#654719;box-shadow:0 4px 7px #30240f30}
+.project-footnote{direction:rtl;text-align:right;font-size:10px!important;color:#827b6e!important;margin:15px 0 0!important}
+.project-art{position:relative;overflow:hidden;aspect-ratio:3/2;margin:0;border:1px solid #eadfca;border-radius:8px;background:#f3ead5;box-shadow:0 12px 28px #49391418}
+.project-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 
-@media(max-width:760px){.current-project{grid-template-columns:1fr;gap:20px;padding:24px 20px 27px}.project-art{height:235px;order:0}.project-copy{order:1}.project-card{top:29px;width:128px;height:172px}.current-project h2{font-size:30px}}
+@media(max-width:760px){.current-project{grid-template-columns:1fr;gap:20px;padding:24px 20px 27px}.project-art{width:100%;aspect-ratio:3/2;order:0}.project-copy{order:1}.current-project h2{font-size:30px}}
