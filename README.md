@@ -1,0 +1,28 @@
+# نوبتِ طراحی
+
+دفتر فارسی یادگیری طراحی بردگیم: **۲۰۰ بازی، ۲۰۰ درس طراحی**.
+
+این پروژه مسیر تجربه‌ی بازی‌ها، تحلیل مکانیزم‌ها، مطالعه‌ی منابع و ساخت نمونه‌های اولیه را ثبت می‌کند. هنوز هیچ بازی به عنوان بازی‌شده ثبت نشده است.
+
+## سایت
+
+آدرس مورد انتظار پس از فعال‌سازی GitHub Pages: https://omidzm.github.io/BoardGameDesign/
+
+صفحه‌ی اصلی در `index.html` و ظاهر واکنش‌گرای راست‌به‌چپ در `styles.css` قرار دارد. سایت بدون مرحله‌ی build قابل انتشار است. فونت Vazirmatn از Google Fonts دریافت می‌شود و در نبود شبکه از Tahoma استفاده می‌کند.
+
+## اجرای محلی
+
+```sh
+python -m http.server 8000
+```
+
+سپس http://localhost:8000 را باز کنید.
+
+## منابع مسیر
+
+- [Board Game Design Lab](https://boardgamedesignlab.com/game-design/)
+- [Games Precipice](https://www.gamesprecipice.com/table-of-contents/)
+- [Decision Space](https://www.decisionspacepodcast.com/)
+- [Adam in Wales](https://www.youtube.com/@AdaminWales)
+
+برای هر بازی، تجربه‌ی واقعی، تعداد دفعات و بازیکنان، یک تصمیم مهم، تحلیل مکانیزم و منابع ثبت می‌شوند. منابع و تحلیل نهایی می‌توانند ورودی ویدئوهای NotebookLM باشند.
