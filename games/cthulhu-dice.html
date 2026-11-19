@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14213d">
+  <meta name="description" content="تحلیل طراحی Cthulhu Dice، بازی تاسی استیو جکسون؛ از انتخاب هدف و پاسخ نامتقارن تا احتمال تاس، بازگشت به بازی و مقایسه با Zombie Dice.">
+  <title>Cthulhu Dice و قاعده‌ی پاسخ به حمله | نوبتِ طراحی</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../responsive.css">
+  <link rel="stylesheet" href="../article.css">
+</head>
+<body class="article-page">
+  <header class="article-header"><div class="wrap"><a class="brand" href="../index.html">✣ نوبتِ طراحی</a><nav class="case-top-picker" aria-label="انتخاب شماره‌ی پرونده"><span>پرونده‌ها</span><a href="../articles/exploding-kittens.html">۰۰۱</a><a href="zombie-dice.html">۰۰۲</a><a href="cthulhu-dice.html" aria-current="page">۰۰۳</a></nav><a class="back-home" href="../index.html#journal">بازگشت به دفتر یادداشت‌ها</a></div></header>
+  <main class="article-main">
+    <section class="article-hero cthulhu-hero">
+      <div>
+        <p class="article-kicker">پرونده‌ی بازی ۰۰۳ · <bdi lang="en">Cthulhu Dice</bdi></p>
+        <h1>وقتی جوابِ حمله به نفع مهاجم است</h1>
+        <p class="article-deck">در <bdi lang="en">Cthulhu Dice</bdi>، حتی تاسی که برای دفاع می‌ریزی می‌تواند آخرین مهره‌ات را به مهاجم بدهد. با یک تاس مشترک، انتخابِ حریف مهم‌ترین تصمیمِ هر نوبت می‌شود.</p>
+        <div class="article-meta"><span>عرضه‌ی نخست ۲۰۱۰</span><span>طراحی <bdi lang="en">Steve Jackson</bdi></span><span>۲ تا ۶ نفر</span><span>حدود ۵ تا ۱۰ دقیقه</span></div>
+      </div>
+      <figure class="cthulhu-transfer">
+        <figcaption>وقتی هدف در پاسخ «شاخک» می‌آورد</figcaption>
+        <div class="cthulhu-transfer-path" aria-hidden="true">
+          <b>هدف</b>
+          <span>یک مهره<i>←</i></span>
+          <b>مهاجم</b>
+        </div>
+        <p>اگر مهاجم مهره داشته باشد، یک مهره از هدف می‌گیرد.</p>
+      </figure>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <p>هر نفر در نقش یکی از پیروان کثولهو با سه مهره‌ی سلامت روان شروع می‌کند. آخرین نفری که در پایان یک نوبت هنوز مهره دارد، برنده است. همه از یک تاس ۱۲وجهی استفاده می‌کنند و مهره‌ها جلوی بازیکنان یا وسط میز دیده می‌شوند. طراحی بازی کار <bdi lang="en">Steve Jackson</bdi> و تصویرگری آن کار <bdi lang="en">Alex Fernandez</bdi> است. مبنای این بررسی <a href="https://www.sjgames.com/dice/cthulhudice/img/CDRules_English.pdf" target="_blank" rel="noopener noreferrer">قانون‌نامه‌ی انگلیسی نسخه‌ی ۱٫۰، مارس ۲۰۱۰</a> است.</p>
+
+        <h2 id="loop">دو پرتاب، یک نوبت</h2>
+        <p>وسط میز در شروع خالی است و مهره‌های اضافه کنار گذاشته می‌شوند. در هر نوبت، مهاجم یک نفر را که دست‌کم یک مهره دارد به‌عنوان هدف انتخاب می‌کند، تاس می‌ریزد و نتیجه را همان لحظه اجرا می‌کند. سپس هدف با همان تاس به مهاجم پاسخ می‌دهد. بعد از اجرای پاسخ، شرط پایان بررسی می‌شود. اگر بازی ادامه داشته باشد، نوبت به نفر سمت چپ مهاجم می‌رسد. پرتاب در نوبت اجباری است.</p>
+        <p>اگر هدف با پرتاب اول به صفر برسد، فرصت پاسخ را دارد. تنها بازیکنِ دارای مهره در پایان دو پرتاب برنده می‌شود. اگر در همان لحظه همه صفر باشند، کثولهو برنده است. <a href="https://www.sjgames.com/dice/cthulhudice/img/CDRules_English.pdf" target="_blank" rel="noopener noreferrer">قانون‌نامه‌ی رسمی</a></p>
+
+        <h2 id="math">روی تاس چه خبر است؟</h2>
+        <p>جدول، احتمال هر نماد را برای یک پرتابِ تاسِ منصفانه نشان می‌دهد. تعداد وجه‌ها از <a href="https://www.engr.ship.edu/downloads/pacise/pacise-proceedings-2017.pdf" target="_blank" rel="noopener noreferrer">جدول ۱ پژوهش شبیه‌سازی بازی در PACISE 2017، صفحه‌ی ۲۴</a> آمده است.</p>
+        <div class="analysis-table-wrap" role="region" aria-label="وجه‌ها و احتمال‌های تاس کثولهو" tabindex="0">
+          <table class="analysis-table cthulhu-faces">
+            <thead><tr><th scope="col">نماد</th><th scope="col">احتمال</th><th scope="col">اثر</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">نشان زرد</th><td>۵ از ۱۲</td><td>طرف مقابلِ پرتاب‌کننده یک مهره به وسط میز می‌دهد.</td></tr>
+              <tr><th scope="row">شاخک</th><td>۴ از ۱۲</td><td>هدف یک مهره به مهاجم می‌دهد، حتی اگر خودِ هدف تاس ریخته باشد. اگر مهاجم صفر مهره دارد، مهره به وسط می‌رود.</td></tr>
+              <tr><th scope="row">نشان کهن</th><td>۱ از ۱۲</td><td>پرتاب‌کننده یک مهره از وسط برمی‌دارد، اگر مهره‌ای آنجا باشد.</td></tr>
+              <tr><th scope="row">کثولهو</th><td>۱ از ۱۲</td><td>هر بازیکنی که مهره دارد، یکی به وسط می‌دهد.</td></tr>
+              <tr><th scope="row">چشم</th><td>۱ از ۱۲</td><td>پرتاب‌کننده اثر یکی از چهار نماد دیگر را انتخاب و اجرا می‌کند.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>شاخک روی یک‌سوم وجه‌هاست. در یک نوبتِ کامل با دو پرتاب مستقل، احتمال دیدن دست‌کم یک شاخک حدود <strong>۵۵٫۶٪</strong> است. برای محاسبه، احتمالِ نیامدن شاخک در هر دو پرتاب را از یک کم می‌کنیم (<bdi dir="ltr">۱ − (۸/۱۲)² = ۵/۹</bdi>). این عدد فقط ظاهرشدن نماد را می‌شمارد. انتقال مهره به وضعیت هدف بستگی دارد و «چشم» هم می‌تواند جداگانه اثر شاخک را اجرا کند.</p>
+
+        <h2 id="choices">انتخاب هدف، انتخابِ کسی است که جواب می‌دهد</h2>
+        <p>بازیکنی که مهره‌ی زیادی دارد شاید ارزشِ ضعیف‌کردن داشته باشد. بازیکنِ تک‌مهره‌ای ممکن است با همان پرتاب نخست به صفر برسد و هنوز فرصت پاسخ داشته باشد. با انتخاب هدف، تعیین می‌کنی پرتاب اول چه کسی را تهدید می‌کند و چه کسی بلافاصله فرصتِ اثرگذاری بر بازی را به دست می‌آورد. در بازی دونفره‌ی پایه تنها هدفِ ممکن همان حریف است. گونه‌ی رسمی <bdi lang="en">Rival Cults</bdi> به هر نفر دو یا سه پیرو می‌دهد تا انتخاب هدف دوباره وارد بازی شود.</p>
+        <p>جکسون این طراحی را نمونه‌ای از <bdi lang="en">Take That</bdi> یا «حمله‌ی مستقیم» می‌داند. انتخاب حریف دست بازیکن است و تاس تعیین می‌کند آن انتخاب چه اثری داشته باشد. «چشم» گاهی ترتیب را برعکس می‌کند. بازیکن نتیجه‌ی تاس را دیده و حالا می‌تواند متناسب با وضعیت میز، از وسط مهره بردارد یا با انتخاب کثولهو به همه فشار بیاورد. <a href="https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/147157-sample.pdf#page=5" target="_blank" rel="noopener noreferrer">یادداشت طراحی استیو جکسون</a></p>
+
+        <h2 id="madness">مهره‌ای که از دست می‌رود کجا می‌رود؟</h2>
+        <p>هم نشان زرد و هم شاخک می‌توانند آخرین مهره‌ی هدف را بگیرند. نشان زرد آن مهره را به وسط می‌فرستد و امکان بازیابی می‌سازد. شاخک در حالت معمول آن را به مهاجم می‌دهد. چون یکی مهره می‌گیرد و دیگری مهره از دست می‌دهد، موقعیتِ مهاجم در برابر هدف به‌اندازه‌ی دو مهره بهتر می‌شود.</p>
+        <p>آمدنِ کثولهو همین بده‌بستان را به کل میز می‌کشاند. اگر هر شش نفر هنوز مهره داشته باشند، یک پرتاب می‌تواند شش مهره را یک‌جا به وسط ببرد. این وجه هم خطرِ افتادن به صفر را بالا می‌برد و هم ذخیره‌ای می‌سازد که بازیکن‌ها بعداً می‌توانند از آن مهره پس بگیرند.</p>
+        <div class="article-note"><p>فرض کنیم وسط میز خالی است و هدف یک مهره دارد. اگر پرتاب اول «نشان زرد» باشد، مهره‌ی به‌جامانده در وسط را می‌تواند همان لحظه با «نشان کهن» یا با «چشم» و انتخاب اثر آن پس بگیرد. با فرض تاس منصفانه، شانس این بازگشت در پرتاب پاسخ <strong>۲ از ۱۲</strong> است. اگر مهاجمِ دارای مهره همان مهره را با «شاخک» برده باشد، وسط همچنان خالی است و این راه بازگشت در پاسخ بسته می‌ماند.</p></div>
+        <p>در نوبت‌های بعد، بازیکنِ بی‌مهره هنوز می‌تواند حمله کند و کسی نمی‌تواند او را به‌عنوان هدفِ یک حمله‌ی تازه انتخاب کند. مهره‌ای که با شاخک می‌دزدد به وسط می‌رود و با اثر نشان کهن می‌تواند مهره‌ای پس بگیرد. این قاعده پیامدِ <a href="../mechanisms/player-elimination.html">حذف بازیکن</a> را سبک‌تر می‌کند. کسی که مهره‌هایش را از دست داده همچنان با انتخاب هدف روی سرنوشت رقبا اثر می‌گذارد.</p>
+
+        <h2 id="comparison">دو بازی تاسی، دو تصمیم متفاوت</h2>
+        <p>استیو جکسون در یادداشت سال ۲۰۱۱ می‌گوید هر دو بازی از هدف‌های اولیه‌ی مشابهی شروع شدند و برای بازی دوم عمداً دنبال تجربه‌ای متفاوت بود. در <a href="zombie-dice.html"><bdi lang="en">Zombie Dice</bdi></a>، بازیکن می‌بیند چه چیزی در همان نوبت به دست آورده و تصمیم می‌گیرد آن را ثبت کند یا دوباره تاس بریزد. در <bdi lang="en">Cthulhu Dice</bdi>، تصمیم پیش از اولین پرتاب گرفته می‌شود و درباره‌ی این است که چه کسی طرفِ درگیری باشد. بنابراین ریسک اینجا بیشتر از رابطه‌ی بازیکن‌ها و وضعیت مهره‌های روی میز می‌آید. <a href="https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/147157-sample.pdf#page=5" target="_blank" rel="noopener noreferrer">یادداشت جکسون در Game Trade Magazine</a></p>
+        <p>از روی قواعد می‌شود انتظار داشت که نوبت‌ها کوتاه بمانند و در عوض، توجه میز بین چند نفر جابه‌جا شود. یک نفر ممکن است چند بارِ پیاپی هدفِ حمله و درگیرِ پرتاب پاسخ شود. همین تمرکز می‌تواند برای یک جمع شوخی و کل‌کل بسازد و برای جمعی دیگر احساسِ زیر فشار بودن. این برداشت از قواعد است و باید در بازیِ واقعی امتحان شود.</p>
+
+        <h2 id="market">عرضه و نشانه‌های بازار</h2>
+        <p>استیو جکسون گیمز عرضه‌ی تجاری بازی را در کنار <bdi lang="en">Zombie Dice</bdi> برای بهار ۲۰۱۰ اعلام کرد. چاپی که فروشگاه رسمی با عنوان ۲۰۲۲ فهرست کرده همچنان یک تاس ۱۲وجهی و ۱۸ مهره‌ی شیشه‌ای دارد. بازه‌ی ۵ تا ۱۰ دقیقه برآورد همان فروشگاه است. <a href="https://www.sjgames.com/wwg/img/wwg90.pdf" target="_blank" rel="noopener noreferrer">اطلاعیه‌ی ناشر در ۲۰۱۰</a> · <a href="https://warehouse23.com/products/cthulhu-dice-2022" target="_blank" rel="noopener noreferrer">مشخصات چاپ ۲۰۲۲</a></p>
+        <p>طبق گزارش سالانه‌ی ناشر، هر دو بازی خیلی زود تجدید چاپ شدند و روی‌هم <strong>۸٫۴٪ از فروش شرکت در سال ۲۰۱۰</strong> را ساختند. در منابع بررسی‌شده، رقم فروش جداگانه یا تعداد نسخه‌های فروخته‌شده‌ی <bdi lang="en">Cthulhu Dice</bdi> پیدا نشد. <a href="https://www.rederpg.com.br/2011/03/19/steve-jackson-e-o-mercado-de-rpg-em-2010/" target="_blank" rel="noopener noreferrer">گزارش سال ۲۰۱۰ ناشر، ترجمه‌ی پرتغالی با اجازه‌ی ناشر</a></p>
+
+        <h2 id="takeaway">چه چیزی ارزش امتحان‌کردن دارد؟</h2>
+        <p>وقتی در یک بازی مهره‌ای از دست می‌رود، مقصدِ آن می‌تواند به‌اندازه‌ی خودِ جریمه مهم باشد. مهره‌ای که به رقیب می‌رسد موازنه را به سود او تغییر می‌دهد. همان مهره در یک ذخیره‌ی مشترک می‌تواند فرصت بازگشت بسازد.</p>
+        <p>برای آزمایش، جهتِ انتقال مهره در شاخکِ پاسخ را برعکس کنیم. در این حالت، هدفی که شاخک می‌آورد یک مهره از مهاجم می‌گیرد و اگر خودش صفر باشد، آن مهره به وسط می‌رود. چند دست چهارنفره با هر دو قاعده بازی کنیم و آغازکننده را بین دست‌ها عوض کنیم. سهمِ حمله به بازیکنان تک‌مهره‌ای و سهمِ نوبت‌هایی را که هدف با مهره‌ی کمتری تمام می‌کند ثبت کنیم. وقتی شاخکِ پاسخ می‌تواند به سود هدف تمام شود، بازیکن‌ها هنوز همان افراد را برای حمله انتخاب می‌کنند؟</p>
+
+        <section class="article-sources" id="sources">
+          <h2>منابع</h2>
+          <ul>
+            <li><a href="https://www.sjgames.com/dice/cthulhudice/img/CDRules_English.pdf" target="_blank" rel="noopener noreferrer">Steve Jackson Games · قانون‌نامه‌ی نسخه‌ی ۱٫۰، مارس ۲۰۱۰</a></li>
+            <li><a href="https://www.engr.ship.edu/downloads/pacise/pacise-proceedings-2017.pdf" target="_blank" rel="noopener noreferrer">PACISE 2017 · جدول فراوانی نمادهای تاس، صفحه‌ی ۲۴</a></li>
+            <li><a href="https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/147157-sample.pdf#page=5" target="_blank" rel="noopener noreferrer">Steve Jackson · یادداشت طراحی Zombie Dice، مه ۲۰۱۱</a></li>
+            <li><a href="https://www.sjgames.com/wwg/img/wwg90.pdf" target="_blank" rel="noopener noreferrer">Steve Jackson Games · اطلاعیه‌ی عرضه‌ی بهار ۲۰۱۰</a></li>
+            <li><a href="https://warehouse23.com/products/cthulhu-dice-2022" target="_blank" rel="noopener noreferrer">Warehouse 23 · مشخصات چاپ ۲۰۲۲</a></li>
+            <li><a href="https://www.rederpg.com.br/2011/03/19/steve-jackson-e-o-mercado-de-rpg-em-2010/" target="_blank" rel="noopener noreferrer">Steve Jackson · گزارش فعالیت و فروش ۲۰۱۰، ترجمه‌ی پرتغالی</a></li>
+          </ul>
+        </section>
+      </article>
+
+      <aside class="article-aside" aria-labelledby="article-contents">
+        <h2 id="article-contents">در این مقاله</h2>
+        <a href="#loop">چرخه‌ی نوبت</a>
+        <a href="#math">وجه‌ها و احتمال تاس</a>
+        <a href="#choices">انتخاب هدف</a>
+        <a href="#madness">مسیر مهره و امکان بازگشت</a>
+        <a href="#comparison">مقایسه با Zombie Dice</a>
+        <a href="#market">عرضه و بازار</a>
+        <a href="#takeaway">آزمایش طراحی</a>
+        <a href="#sources">منابع</a>
+      </aside>
+    </div>
+    <nav class="case-pagination" aria-label="گشت‌وگذار میان پرونده‌ها">
+      <a class="case-pagination-control" href="zombie-dice.html"><small>پرونده‌ی قبلی</small><strong>۰۰۲ · Zombie Dice</strong><span>رفتن به پرونده</span></a>
+      <div class="case-pagination-select"><span>انتخاب شماره</span><a href="../articles/exploding-kittens.html">۰۰۱</a><a href="zombie-dice.html">۰۰۲</a><a href="cthulhu-dice.html" aria-current="page">۰۰۳</a></div>
+      <span class="case-pagination-control case-pagination-disabled"><small>پرونده‌ی بعدی</small><strong>به‌زودی</strong><span>پرونده‌ی بعدی هنوز منتشر نشده</span></span>
+    </nav>
+  </main>
+  <footer class="site-footer"><div class="article-main"><a href="../index.html#journal">بازگشت به دفتر یادداشت‌ها</a></div></footer>
+</body>
+</html>

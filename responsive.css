@@ -207,3 +207,34 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .sales-poster-copy > strong { font-size: 53px; }
   .sales-poster-copy > b { font-size: 17px; }
 }
+
+/* Browse the published game files as a small, numbered library. */
+.case-number-picker{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 22px;padding:14px 16px;border:1px solid #e2e8f0;border-radius:9px;background:#fff}
+.case-picker-label{margin-inline-end:auto;color:#526177;font-size:13px;font-weight:600}
+.case-number-picker>a{display:inline-flex;align-items:center;gap:9px;min-height:42px;padding:7px 12px;border:1px solid #dbe3ef;border-radius:7px;background:#f8fbff;color:#14213d;font-size:13px;transition:border-color .15s ease,background .15s ease}
+.case-number-picker>a:hover{border-color:#93c5fd;background:#eff6ff}
+.case-number-picker>a b{color:#2563eb;font:700 13px Georgia,serif;direction:ltr}
+.case-library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.case-library-card{display:grid;grid-template-columns:minmax(130px,.72fr) minmax(0,1.28fr);min-width:0;overflow:hidden;border:1px solid #dbe3ef;border-radius:10px;background:#fff;transition:border-color .15s ease,transform .15s ease}
+.case-library-card:hover{border-color:#93c5fd;transform:translateY(-2px)}
+.case-library-art{min-height:300px!important;height:100%;border:0!important;border-radius:0!important}
+.case-library-art:before{width:190px;height:190px}.case-library-art:after{width:242px;height:242px}
+.case-library-art .entry-art-cards{transform:scale(.8)}
+.case-library-art .entry-art-caption{width:calc(100% - 18px);font-size:10px}
+.case-card-content{display:flex;flex-direction:column;align-items:flex-start;min-width:0;padding:20px}
+.case-card-kicker{margin:0 0 5px;color:#2563eb;font-size:12px;font-weight:700}
+.case-card-content h3{margin:0 0 9px;color:#14213d;font-size:clamp(18px,1.7vw,22px);line-height:1.55;overflow-wrap:anywhere}
+.case-card-content>p:not(.case-card-kicker){margin:0;color:#526177;font-size:14px;line-height:1.9}
+.case-card-tags{display:flex;flex-wrap:wrap;gap:7px;margin-block:14px 16px}
+.case-card-tags a{padding:4px 8px;border:1px solid #dbeafe;border-radius:20px;background:#f8fbff;color:#2563eb;font-size:11px}
+.case-card-content .article-link{margin-top:auto;font-size:13px}
+.case-zombie-art{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;background:radial-gradient(circle at 50% 45%,#fff 0 35%,transparent 36%),linear-gradient(145deg,#f0fdf4,#eff6ff 52%,#fff7ed)}
+.case-zombie-kicker{position:absolute;top:22%;color:#526177;font-size:10px;text-align:center}
+.case-zombie-dice{display:flex;align-items:center;gap:5px;direction:ltr;margin-top:16px}
+.case-zdie{display:grid;place-items:center;width:43px;height:50px;border:2px solid #fff;border-radius:10px;box-shadow:0 8px 14px #14213d20;font:800 20px Georgia,serif}
+.case-zdie-green{background:#198754;color:#fff;transform:rotate(-8deg)}.case-zdie-yellow{background:#facc15;color:#14213d;transform:translateY(-7px)}.case-zdie-red{background:#dc5b45;color:#fff;transform:rotate(8deg)}
+.case-zombie-caption{position:absolute;bottom:18px;color:#526177;font-size:10px}
+@media(max-width:1200px){.case-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.case-library-card:nth-child(3):last-child{grid-column:1/-1;max-width:560px;justify-self:center;width:100%}}
+@media(max-width:1050px){.case-library-grid{grid-template-columns:minmax(0,1fr)}.case-library-card{grid-template-columns:minmax(150px,.5fr) minmax(0,1.5fr)}.case-library-card:nth-child(3):last-child{grid-column:auto;max-width:none}}
+@media(max-width:760px){.case-number-picker{align-items:stretch}.case-picker-label{width:100%;margin:0 0 3px}.case-number-picker>a{flex:1;justify-content:center}.case-library-card{grid-template-columns:155px minmax(0,1fr)}.case-library-art{min-height:280px!important}}
+@media(max-width:520px){.case-number-picker>a{justify-content:flex-start}.case-library-card{grid-template-columns:minmax(0,1fr)}.case-library-art{min-height:185px!important;height:185px}.case-library-art .entry-art-cards{transform:scale(.72)}.case-library-art .entry-art-number{top:11px;left:12px}.case-zombie-kicker{top:20%}.case-zombie-dice{margin-top:24px}.case-zombie-caption{bottom:10px}.case-card-content{padding:18px}.case-card-content h3{font-size:20px}}
