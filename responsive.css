@@ -161,3 +161,21 @@ nav a { display: inline-flex; align-items: center; min-height: 44px; }
 .mechanism-grid b{font-size:12px;color:#2563eb}
 @media(max-width:900px){.mechanism-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.mechanism-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Keep the article cards and their caption apart on narrow screens. */
+.card-art { overflow: hidden; }
+.art-card-one { top: 50%; left: 50%; transform: translate(calc(-50% - 65px), calc(-50% + 7px)) rotate(-16deg); }
+.art-card-two { top: 50%; left: 50%; transform: translate(-50%, calc(-50% - 8px)); }
+.art-card-three { top: 50%; left: 50%; transform: translate(calc(-50% + 65px), calc(-50% + 7px)) rotate(16deg); }
+.art-caption { bottom: 8px; width: calc(100% - 24px); padding: 6px 10px; border-radius: 6px; background: #ffffffed; line-height: 1.5; text-align: center; }
+@media (max-width: 760px) {
+  .card-art { min-height: 270px; }
+  .art-card { width: 104px; height: 152px; }
+}
+@media (max-width: 520px) {
+  .card-art { min-height: 260px; }
+  .art-card { width: 92px; height: 138px; }
+  .art-card-one { transform: translate(calc(-50% - 52px), calc(-50% + 6px)) rotate(-16deg); }
+  .art-card-two { transform: translate(-50%, calc(-50% - 7px)); }
+  .art-card-three { transform: translate(calc(-50% + 52px), calc(-50% + 6px)) rotate(16deg); }
+}
