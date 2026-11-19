@@ -3,6 +3,16 @@
 .mechanism-english{margin:-4px 0 14px!important;color:#64748b!important;font:500 16px/1.6 Georgia,serif!important;letter-spacing:.2px}
 .mechanism-callout a{display:inline-flex;flex-direction:column;gap:1px;align-items:flex-start}
 .mechanism-callout small{font:500 11px/1.5 Georgia,serif;color:#64748b}
+.zombie-title-art { min-height: 290px; padding: 26px; display: flex; flex-direction: column; justify-content: center; gap: 18px; overflow: hidden; border: 1px solid #dbeafe; border-radius: 16px; background: radial-gradient(circle at 50% 40%, #fff 0 35%, transparent 36%), linear-gradient(145deg,#f0fdf4,#eff6ff 52%,#fff7ed); }
+.zombie-art-kicker { color: #526177; font-size: 12px; text-align: center; }
+.zombie-dice-row { display: flex; justify-content: center; align-items: center; gap: clamp(8px,2vw,20px); direction: ltr; }
+.z-die { width: clamp(76px,9vw,112px); aspect-ratio: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 1px solid #ffffff; border-radius: 18px; box-shadow: 0 12px 25px #14213d20, inset 0 0 0 3px #ffffffa0; transform: rotate(-5deg); }
+.z-die:nth-child(2) { transform: translateY(-14px) rotate(2deg); }
+.z-die:nth-child(3) { transform: rotate(6deg); }
+.green-die { background: #198754; color: #fff; }.yellow-die { background: #facc15; color: #14213d; }.red-die { background: #dc5b45; color: #fff; }
+.z-die b { font: 800 32px/1 Georgia,serif; }.z-die span { font-size: 13px; font-weight: 700; }.z-die small { margin-top: 2px; font-size: 9px; opacity: .82; }
+.zombie-art-legend { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; color: #526177; font-size: 11px; }
+.zombie-art-legend span { display: inline-flex; align-items: center; gap: 5px; }.zombie-art-legend i { width: 8px; height: 8px; display: inline-block; border-radius: 50%; }.brain-dot { background: #198754; }.foot-dot { background: #facc15; }.shot-dot { background: #dc5b45; }
 
 /* Mechanism explainers and designer directory */
 .mechanism-source { font-size: 13px !important; color: #718096 !important; }
