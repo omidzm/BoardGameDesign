@@ -8,7 +8,7 @@ h1, h2, h3, p, a { overflow-wrap: break-word; }
 .hero-actions, .mini-tags { flex-wrap: wrap; }
 .button, .project-cta { max-width: 100%; min-height: 44px; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; }
-.steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .resources { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
 .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); padding-inline-start: 14px; }
 .interest-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
