@@ -56,6 +56,14 @@
 .cthulhu-faces td:nth-child(2) { white-space: nowrap; }
 .cthulhu-faces tbody tr:last-child th { border-bottom: 0; }
 
+.incan-hero h1 { text-wrap: balance; }
+.incan-hero-art { margin: 0; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 16px; }
+.incan-hero-art img { display: block; width: 100%; height: auto; }
+.incan-hero-art figcaption { padding: 8px 14px; background: #f8fafc; color: #526177; font-size: 12px; }
+.incan-results .analysis-table { min-width: 0; }
+.incan-results .analysis-table th { white-space: normal; }
+.incan-results .analysis-table td { font-variant-numeric: tabular-nums; }
+
 /* Mechanism explainers and designer directory */
 .mechanism-source { font-size: 13px !important; color: #718096 !important; }
 .mechanism-source a, .designer-source a { color: #2563eb; text-decoration: underline; text-underline-offset: 3px; }
